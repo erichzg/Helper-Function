@@ -5,7 +5,7 @@
   2017-04-19
  */
 import java.util.ArrayList;
-public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
+public class ArrayPriorityQueue implements PriorityQueue{
     
     private ArrayList<Ticket> q;
     public ArrayPriorityQueue(){
@@ -47,19 +47,21 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
     }
 
     //Returns the smallest item in the PQ from the front
-    public T peekMin(){
+    public Ticket peekMin(){
 	return q.get(0);
     }
 
     //Removes and returns the smallest item from the front
-    public T removeMin(){
-	T old = peekMin();
+    public Ticket removeMin(){
+	Ticket old = peekMin();
 	q.remove(0);
 	return old;
     }
+
     public String toString(){
 	return q.toString();
     }
+    /*
     public static void main(String[] args){
 	ArrayPriorityQueue<Integer> a = new ArrayPriorityQueue<Integer>();
 	a.add(1);
@@ -69,6 +71,6 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
 	a.removeMin();
 	System.out.println(a);
     }
-    
+    */
 
 }

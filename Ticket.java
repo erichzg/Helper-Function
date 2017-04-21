@@ -1,11 +1,8 @@
 public class Ticket implements Comparable {
 
-    int id;
-    int vpLvl;
-    String problem;
-    boolean solved;
-    String name;
-    String solutionDesc;
+    private int id, vpLvl;
+    private String problem, name, solutionDesc;
+    private boolean solved;
 
     public Ticket() {
 	id = 0;
@@ -24,6 +21,31 @@ public class Ticket implements Comparable {
 	name = nam;
     }
 
-    public int compareTo(Ticket x) {
-	return vpLvl.compareTo(x.getLvl());
+    public int compareTo(Object x) {
+	return vpLvl-((Ticket)x).getLvl();
     }
+
+    public int getLvl() {
+	return vpLvl;
+    }
+
+    public String getName() {
+	return name;
+    }
+
+    public int setId(int newId) {
+	id = newId;
+	return id;
+    }
+
+    public boolean setSolved(boolean newSolved) {
+	solved = newSolved;
+	return solved;
+    }
+
+    public String setSolutionDesc(String newSolution) {
+	solutionDesc = newSolution;
+	return solutionDesc;
+    }
+
+}
