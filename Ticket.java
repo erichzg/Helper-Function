@@ -25,6 +25,10 @@ public class Ticket implements Comparable {
 	return vpLvl-((Ticket)x).getLvl();
     }
 
+    public int getId() {
+	return id;
+    }
+
     public int getLvl() {
 	return vpLvl;
     }

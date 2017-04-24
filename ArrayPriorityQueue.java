@@ -1,9 +1,3 @@
-/*
-  Team JDK: Judy Liu, David Frid, Karina Ionkina
-  APCS2 pd5
-  HW32 -- Getting Past the Velvet Rope
-  2017-04-19
- */
 import java.util.ArrayList;
 public class ArrayPriorityQueue implements PriorityQueue{
     
@@ -59,7 +53,11 @@ public class ArrayPriorityQueue implements PriorityQueue{
     }
 
     public String toString(){
-	return q.toString();
+	String retStr = "";
+	for (Ticket tick: q) {
+	    retStr += tick.getId()+": "+tick.getName()+", ";
+	}
+	return retStr.substring(0, retStr.length()-2);
     }
     /*
     public static void main(String[] args){

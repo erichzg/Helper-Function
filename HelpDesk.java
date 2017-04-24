@@ -35,8 +35,19 @@ public class HelpDesk {
 	return queue.peekMin();
     }
 
+    public String toString() {
+	return queue.toString();
+    }
+
     public static void main(String[] args) {
 	HelpDesk helper = new HelpDesk();
+	Ticket first = new Ticket(0,1,"problem1","first");
+	Ticket second = new Ticket(0,0,"problem2","second");
+	Ticket third = new Ticket(0,2,"problem3","third");
+	helper.addTicket(first);
+	helper.addTicket(second);
+	helper.addTicket(third);
+	System.out.println(helper);
     }
 
 }
