@@ -8,6 +8,12 @@ Ticket:<br>
   Comparable based on priority
   
 HelpDesk:<br>
+<ul>
+  <li> addTicket() uses user input. The user is prompted for their name, vp level, and issue.  All of this is used to add a new Ticket to the Ticket queue in HelpDesk. The id of each added Ticket is one more than the previous. </li>
+  <li> deQueue() is used for an unsolved problem. </li>
+  <li> deQueue(String solutionDesc) is used for a solved problem, it prints out the solution. </li>
+</ul>
+  <br>
   Instance variable: ArrayPriorityQueue for tickets and maximum id
   <br>
-  Sets the id of each added Ticket as one more than the previous
+

@@ -42,20 +42,23 @@ public class ArrayPriorityQueue implements PriorityQueue{
 
     //Returns the smallest item in the PQ from the front
     public Ticket peekMin(){
+	if(isEmpty()) return null;
 	return q.get(0);
     }
 
     //Removes and returns the smallest item from the front
     public Ticket removeMin(){
+	if(isEmpty()) return null;
 	Ticket old = peekMin();
 	q.remove(0);
 	return old;
     }
 
     public String toString(){
-	String retStr = "";
+	String retStr = "Next: \n";
+	if(isEmpty()) return "No more problems.";
 	for (Ticket tick: q) {
-	    retStr += tick.getId()+": "+tick.getName()+", ";
+	    retStr += "Ticket ID " + tick.getId()+": "+tick.getName()+", ";
 	}
 	return retStr.substring(0, retStr.length()-2);
     }
